@@ -16,10 +16,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.changeBackgroundColor()
+        
     }
     
     func changeBackgroundColor() {
-        self.view.backgroundColor = UIColor.yellowColor()
+        self.view.backgroundColor = UIColor.whiteColor()
     }
     
     
@@ -34,10 +35,12 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     //FIXME:修复bug
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")!
-        cell.textLabel?.text = String.init(format: "这是第%d行", indexPath.row)
+        cell.textLabel?.text = String.init(format: "这是第%@行", dataArray[indexPath.row])
         return cell
     }
-    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("点击了第\(indexPath.section)组第\(indexPath.row)行")
+    }
     
     
     override func didReceiveMemoryWarning() {

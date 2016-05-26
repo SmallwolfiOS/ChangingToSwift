@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96755EDD1CF694AC00770146 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96755EDC1CF694AC00770146 /* DetailTableViewController.swift */; };
+		96755EDF1CF6955E00770146 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96755EDE1CF6955E00770146 /* DetailTableViewCell.swift */; };
 		E26E276F1CF5EDC9002311AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E276E1CF5EDC9002311AF /* AppDelegate.swift */; };
 		E26E27711CF5EDC9002311AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E27701CF5EDC9002311AF /* ViewController.swift */; };
 		E26E27741CF5EDC9002311AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E26E27721CF5EDC9002311AF /* Main.storyboard */; };
 		E26E27761CF5EDC9002311AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26E27751CF5EDC9002311AF /* Assets.xcassets */; };
 		E26E27791CF5EDC9002311AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E26E27771CF5EDC9002311AF /* LaunchScreen.storyboard */; };
-		E26E27811CF5EF44002311AF /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E27801CF5EF44002311AF /* ViewController1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		96755EDC1CF694AC00770146 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		96755EDE1CF6955E00770146 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		E26E276B1CF5EDC9002311AF /* ChangingToSwift01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChangingToSwift01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26E276E1CF5EDC9002311AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E26E27701CF5EDC9002311AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +26,6 @@
 		E26E27751CF5EDC9002311AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E26E27781CF5EDC9002311AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E26E277A1CF5EDC9002311AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E26E27801CF5EF44002311AF /* ViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				E26E276E1CF5EDC9002311AF /* AppDelegate.swift */,
 				E26E27701CF5EDC9002311AF /* ViewController.swift */,
-				E26E27801CF5EF44002311AF /* ViewController1.swift */,
+				96755EDC1CF694AC00770146 /* DetailTableViewController.swift */,
+				96755EDE1CF6955E00770146 /* DetailTableViewCell.swift */,
 				E26E27721CF5EDC9002311AF /* Main.storyboard */,
 				E26E27751CF5EDC9002311AF /* Assets.xcassets */,
 				E26E27771CF5EDC9002311AF /* LaunchScreen.storyboard */,
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E26E27811CF5EF44002311AF /* ViewController1.swift in Sources */,
+				96755EDD1CF694AC00770146 /* DetailTableViewController.swift in Sources */,
 				E26E27711CF5EDC9002311AF /* ViewController.swift in Sources */,
+				96755EDF1CF6955E00770146 /* DetailTableViewCell.swift in Sources */,
 				E26E276F1CF5EDC9002311AF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,7 +259,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ChangingToSwift01/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Jason.ChangingToSwift01;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chnsys.ChangingToSwift01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -266,7 +270,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ChangingToSwift01/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Jason.ChangingToSwift01;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chnsys.ChangingToSwift01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
