@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--第一页-->
@@ -22,16 +21,13 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="SY2-tr-sBE">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="60" id="SY2-tr-sBE">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SY2-tr-sBE" id="2yX-So-wV0">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="lOJ-jQ-Sbe" kind="push" id="IX9-uJ-6N4"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -51,54 +47,12 @@
                     <navigationItem key="navigationItem" title="第一页" id="zlG-Mv-4oC"/>
                     <connections>
                         <outlet property="tableView" destination="aow-Gd-9Im" id="RD0-cH-q55"/>
+                        <segue destination="A04-qM-l0E" kind="push" identifier="PushToDetail" id="8oT-VT-xQO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="581" y="354"/>
-        </scene>
-        <!--Detail-->
-        <scene sceneID="WH9-op-W5C">
-            <objects>
-                <tableViewController id="lOJ-jQ-Sbe" customClass="DetailTableViewController" customModule="ChangingToSwift01" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="I8t-oC-sNN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="Wnz-yZ-EbB" customClass="DetailTableViewCell" customModule="ChangingToSwift01" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wnz-yZ-EbB" id="mK5-f2-d1F">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple" translatesAutoresizingMaskIntoConstraints="NO" id="hp7-oF-MgO">
-                                            <rect key="frame" x="8" y="0.0" width="37" height="44"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="37" id="wl8-pw-cTM"/>
-                                            </constraints>
-                                        </imageView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="hp7-oF-MgO" firstAttribute="top" secondItem="mK5-f2-d1F" secondAttribute="top" id="6ft-5C-6Yj"/>
-                                        <constraint firstItem="hp7-oF-MgO" firstAttribute="centerY" secondItem="mK5-f2-d1F" secondAttribute="centerY" id="E9d-I7-Caw"/>
-                                        <constraint firstItem="hp7-oF-MgO" firstAttribute="leading" secondItem="mK5-f2-d1F" secondAttribute="leadingMargin" id="ecm-hw-yYH"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="lOJ-jQ-Sbe" id="oNX-1m-8zI"/>
-                            <outlet property="delegate" destination="lOJ-jQ-Sbe" id="drl-mY-64g"/>
-                        </connections>
-                    </tableView>
-                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <navigationItem key="navigationItem" title="Detail" id="JKQ-3k-tRg"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ec7-FP-ArQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1010" y="354"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mgo-NS-UWh">
@@ -118,8 +72,35 @@
             </objects>
             <point key="canvasLocation" x="162" y="354"/>
         </scene>
+        <!--Detail-->
+        <scene sceneID="e8z-bz-axC">
+            <objects>
+                <tableViewController id="A04-qM-l0E" customClass="DetailTableViewController" customModule="ChangingToSwift01" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ePF-FO-8Q2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="60" id="ipg-Ux-toU" customClass="DetailTableViewCell" customModule="ChangingToSwift01" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ipg-Ux-toU" id="Gt3-fA-m3c">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="A04-qM-l0E" id="lBb-GI-T3f"/>
+                            <outlet property="delegate" destination="A04-qM-l0E" id="tbR-x8-KXa"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" title="Detail" id="JQP-gh-ehx"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JF8-k1-wLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1010" y="354"/>
+        </scene>
     </scenes>
-    <resources>
-        <image name="apple" width="269" height="314"/>
-    </resources>
 </document>

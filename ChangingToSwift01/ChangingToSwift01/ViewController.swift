@@ -10,13 +10,13 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
-    var dataArray = ["0","1","2","3","4"]
+    var dataArray = ["打电话","发短信","发邮件","用Safari打开网址","拓展"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.changeBackgroundColor()
-        
+        changeBackgroundColor()
+        self.tableView.tableFooterView = UIView.init()//影藏多余的cell
     }
     
     func changeBackgroundColor() {
@@ -26,7 +26,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     //MARK:函数标签
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     //TODO:要做的函数标签
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,13 +35,44 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     //FIXME:修复bug
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")!
-        cell.textLabel?.text = String.init(format: "这是第%@行", dataArray[indexPath.row])
+        cell.textLabel?.text = String.init(format: "%@", dataArray[indexPath.row])
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("点击了第\(indexPath.section)组第\(indexPath.row)行")
+        ActionForCellWithIndexPath(indexPath)
+        
+        
+    }
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 60
     }
     
+    func ActionForCellWithIndexPath(indexPath:NSIndexPath) {
+        switch indexPath.row {
+        case 0:
+            print("点击了打电话")
+            HP_Util.callNumberEndBackUpSuggest("18810901468", view: self.view)
+
+        case 1:
+            HP_Util.messageTo("18810901468")
+        case 2:
+            HP_Util.emailTo("swift@qq.com")
+        case 3:
+            HP_Util.openInSafariUrl("http://www.baidu.com")
+        case 4:
+            performSegueWithIdentifier("PushToDetail", sender: self.dataArray[indexPath.row])
+        default:
+            break
+        }
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let strValue = sender as! String
+        if segue.identifier == "PushToDetail" {
+            let pushVC = segue.destinationViewController
+            pushVC.title = strValue
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

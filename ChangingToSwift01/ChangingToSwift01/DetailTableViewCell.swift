@@ -10,12 +10,13 @@ import UIKit
 
 class DetailTableViewCell: UITableViewCell {
 
+    var textString:String = ""
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     func logData() {
-        print("居然成功了")
+        self.textLabel?.text = self.textString
     }
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
