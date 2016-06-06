@@ -49,15 +49,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6M-C3-QNM">
-                                <rect key="frame" x="35" y="105" width="71" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RAp-He-dw2">
+                                <rect key="frame" x="35" y="244" width="221" height="242"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6M-C3-QNM">
+                                <rect key="frame" x="0.0" y="64" width="71" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="7En-cb-npr"/>
+                                    <constraint firstAttribute="width" constant="71" id="Fq4-nm-1oQ"/>
+                                </constraints>
                                 <state key="normal" title="拍照"/>
                                 <connections>
                                     <action selector="cameraAction:" destination="pLh-KP-GD2" eventType="touchUpInside" id="hiJ-DK-3eg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLU-ud-uEC">
-                                <rect key="frame" x="148" y="105" width="71" height="57"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLU-ud-uEC">
+                                <rect key="frame" x="529" y="64" width="71" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="K8r-vI-7ha"/>
+                                    <constraint firstAttribute="width" constant="71" id="Uth-Fl-vdm"/>
+                                </constraints>
                                 <state key="normal" title="录像"/>
                                 <connections>
                                     <action selector="vedioBtnAction:" destination="pLh-KP-GD2" eventType="touchUpInside" id="rHn-U2-os1"/>
@@ -65,9 +76,16 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oLU-ud-uEC" firstAttribute="top" secondItem="L3a-KA-eEq" secondAttribute="bottom" id="1QY-tS-rsu"/>
+                            <constraint firstItem="j6M-C3-QNM" firstAttribute="leading" secondItem="iKn-Ej-6tm" secondAttribute="leading" id="9no-hQ-55M"/>
+                            <constraint firstAttribute="trailing" secondItem="oLU-ud-uEC" secondAttribute="trailing" id="LRH-PI-vnD"/>
+                            <constraint firstItem="j6M-C3-QNM" firstAttribute="top" secondItem="L3a-KA-eEq" secondAttribute="bottom" id="yo0-lv-bFm"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="cameraBtn" destination="j6M-C3-QNM" id="o7x-Kb-UE7"/>
+                        <outlet property="imageView" destination="RAp-He-dw2" id="Hp7-42-8Kw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNW-eQ-A7O" userLabel="First Responder" sceneMemberID="firstResponder"/>

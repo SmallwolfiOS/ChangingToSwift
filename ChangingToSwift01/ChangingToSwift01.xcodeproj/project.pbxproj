@@ -192,8 +192,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: guoxing jiang (3UD22X5P54)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: guoxing jiang (3UD22X5P54)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Guoxing Jiang (NH4JYC34AZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Guoxing Jiang (NH4JYC34AZ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -215,7 +215,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "86472963-bd1f-4337-b3fc-bb94322ed900";
+				PROVISIONING_PROFILE = "bd590145-f124-49fa-866c-d2e78d9eda40";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -239,8 +239,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: guoxing jiang (3UD22X5P54)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: guoxing jiang (3UD22X5P54)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Guoxing Jiang (NH4JYC34AZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Guoxing Jiang (NH4JYC34AZ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -255,7 +255,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "86472963-bd1f-4337-b3fc-bb94322ed900";
+				PROVISIONING_PROFILE = "bd590145-f124-49fa-866c-d2e78d9eda40";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -265,12 +265,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Guoxing Jiang (NH4JYC34AZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Guoxing Jiang (NH4JYC34AZ)";
 				INFOPLIST_FILE = ChangingToSwift01/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chnsys.ChangingToSwift01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "86472963-bd1f-4337-b3fc-bb94322ed900";
+				PROVISIONING_PROFILE = "bd590145-f124-49fa-866c-d2e78d9eda40";
 			};
 			name = Debug;
 		};
@@ -278,12 +280,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Guoxing Jiang (NH4JYC34AZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Guoxing Jiang (NH4JYC34AZ)";
 				INFOPLIST_FILE = ChangingToSwift01/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chnsys.ChangingToSwift01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "86472963-bd1f-4337-b3fc-bb94322ed900";
+				PROVISIONING_PROFILE = "bd590145-f124-49fa-866c-d2e78d9eda40";
 			};
 			name = Release;
 		};

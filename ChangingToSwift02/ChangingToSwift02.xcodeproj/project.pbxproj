@@ -290,6 +290,7 @@
 				96CC2B3B1D0030480053C4A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

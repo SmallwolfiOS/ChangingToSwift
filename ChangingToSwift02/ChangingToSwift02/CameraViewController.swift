@@ -11,6 +11,9 @@ import MobileCoreServices
 
 class CameraViewController: UIViewController ,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     @IBOutlet weak var cameraBtn: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    
     var pickerVC:UIImagePickerController = UIImagePickerController()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +26,10 @@ class CameraViewController: UIViewController ,UIImagePickerControllerDelegate,UI
         pickerVC.cameraCaptureMode = UIImagePickerControllerCameraCaptureMode.Photo //设置摄像头捕捉模式为捕捉图片
         self .presentViewController(pickerVC, animated: true, completion: nil)
     }
-    @IBAction func vedioBtnAction(sender: UIButton) {
-        
+    @IBAction func vedioBtnAction(sender: UIButton){
+        pickerVC.mediaTypes = [kUTTypeImage as String]//设定拍照的媒体类型
+        pickerVC.cameraCaptureMode = UIImagePickerControllerCameraCaptureMode.Photo //设置摄像头捕捉模式为捕捉图片
+        self .presentViewController(pickerVC, animated: true, completion: nil)
     }
     //MARK:初始化拾取控制器
     func ininPickerViewController() {
@@ -57,13 +62,15 @@ class CameraViewController: UIViewController ,UIImagePickerControllerDelegate,UI
         }else{
             let ALertVC = UIAlertController.init(title: "保存成功", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
             
-            ALertVC.addAction(UIAlertAction.init(title: "确定", style: UIAlertActionStyle.Default, handler: nil))
+            ALertVC.addAction(UIAlertAction.init(title: "确定", style: UIAlertActionStyle.Default, handler:{
+                action in
+                print("保存成功了")
+                self.imageView.image = image
+            }))
             presentViewController(ALertVC, animated: true, completion: nil)
         }
     }
-    func IKhandle()  {
-        
-    }
+    
 
     /*
     // MARK: - Navigation
