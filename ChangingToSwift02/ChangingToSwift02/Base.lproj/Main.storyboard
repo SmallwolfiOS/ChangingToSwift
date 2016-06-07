@@ -31,6 +31,7 @@
                     <navigationItem key="navigationItem" id="12v-H1-RfJ"/>
                     <connections>
                         <segue destination="pLh-KP-GD2" kind="show" identifier="PushToDetail" id="gxs-Hg-jvh"/>
+                        <segue destination="a0b-Pl-O9G" kind="show" identifier="PushToAv" id="Qkg-8p-vzq"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EvJ-1b-SzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -91,6 +92,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNW-eQ-A7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1647" y="536"/>
+        </scene>
+        <!--Vedio View Controller-->
+        <scene sceneID="osf-nv-Ujz">
+            <objects>
+                <viewController id="a0b-Pl-O9G" customClass="AVVedioViewController" customModule="ChangingToSwift02" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="94n-Tz-EoS"/>
+                        <viewControllerLayoutGuide type="bottom" id="twf-D1-88g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6DM-8G-asN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xq5-b3-auh">
+                                <rect key="frame" x="35" y="244" width="221" height="242"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agX-Oe-yMO">
+                                <rect key="frame" x="0.0" y="64" width="71" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="1Hw-GT-apt"/>
+                                    <constraint firstAttribute="width" constant="71" id="rxC-BN-gTA"/>
+                                </constraints>
+                                <state key="normal" title="拍照"/>
+                                <connections>
+                                    <action selector="cameraBtnClick:" destination="a0b-Pl-O9G" eventType="touchUpInside" id="uw2-1r-oh8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekx-I9-fzZ">
+                                <rect key="frame" x="529" y="64" width="71" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="FOA-Qk-4My"/>
+                                    <constraint firstAttribute="height" constant="57" id="pC0-Cb-Xyx"/>
+                                </constraints>
+                                <state key="normal" title="录像"/>
+                                <connections>
+                                    <action selector="vedioBtnClick:" destination="a0b-Pl-O9G" eventType="touchUpInside" id="Jvs-YM-u8k"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="agX-Oe-yMO" firstAttribute="leading" secondItem="6DM-8G-asN" secondAttribute="leading" id="7Ld-te-8hm"/>
+                            <constraint firstItem="Ekx-I9-fzZ" firstAttribute="top" secondItem="94n-Tz-EoS" secondAttribute="bottom" id="FNb-wM-Vpj"/>
+                            <constraint firstItem="agX-Oe-yMO" firstAttribute="top" secondItem="94n-Tz-EoS" secondAttribute="bottom" id="GBa-gw-CGS"/>
+                            <constraint firstAttribute="trailing" secondItem="Ekx-I9-fzZ" secondAttribute="trailing" id="Zu7-s4-lwb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraBtn" destination="agX-Oe-yMO" id="3ky-jw-gBj"/>
+                        <outlet property="imageView" destination="xq5-b3-auh" id="XhY-Ol-spU"/>
+                        <outlet property="vedioBtn" destination="Ekx-I9-fzZ" id="i76-Yt-QkQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eci-6w-paC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1356" y="1319"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="g4s-B3-Idd">

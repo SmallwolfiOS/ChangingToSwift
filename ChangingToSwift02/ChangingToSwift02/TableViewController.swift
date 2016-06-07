@@ -9,7 +9,7 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-    var dataArray = ["打开相册","打开摄像头"]
+    var dataArray = ["使用原生UIImagePickerViewController","使用AVFoundation"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,8 +41,10 @@ class TableViewController: UITableViewController {
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let index = indexPath.row
-        if index == 1 {
-            self .performSegueWithIdentifier("PushToDetail", sender: indexPath.row)
+        if index == 0 {
+            performSegueWithIdentifier("PushToDetail", sender: indexPath.row)
+        }else if index == 1{
+            performSegueWithIdentifier("PushToAv", sender: indexPath.row)
         }
         
     }
