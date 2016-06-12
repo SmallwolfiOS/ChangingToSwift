@@ -7,6 +7,28 @@
 //
 
 import UIKit
+class A {
+    var number:Int {
+        get{
+            print("get")
+            return 1
+        }
+        set{
+            print("set")
+        }
+    }
+}
+
+class B: A {
+    override var number: Int{
+        willSet{
+            print("willSet")
+        }
+        didSet{
+            print("didSet")
+        }
+    }
+}
 
 class TableViewController: UITableViewController {
     var dataArray = ["使用原生UIImagePickerViewController","使用AVFoundation"]
@@ -15,6 +37,9 @@ class TableViewController: UITableViewController {
 
         self.tableView.tableFooterView = UIView.init(frame: CGRectZero)
         self.tableView.rowHeight = 60
+        let b = B()
+        
+        b.number = 0
         
     }
 
