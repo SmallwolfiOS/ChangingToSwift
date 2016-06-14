@@ -11,7 +11,7 @@ class A {
     var number:Int {
         get{
             print("get")
-            return 1
+            return 3
         }
         set{
             print("set")
@@ -26,6 +26,7 @@ class B: A {
         }
         didSet{
             print("didSet")
+//            number = 3
         }
     }
 }
@@ -40,6 +41,7 @@ class TableViewController: UITableViewController {
         let b = B()
         
         b.number = 0
+        print("\(b.number)")
         
     }
 
