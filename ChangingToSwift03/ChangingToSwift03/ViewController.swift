@@ -16,18 +16,19 @@ class ViewController: UIViewController {
         let dateComp:NSDateComponents = NSDateComponents ()
         dateComp.year = 2016
         dateComp.month = 06
-        dateComp.day = 14
-        dateComp.hour = 16
-        dateComp.minute = 22
+        dateComp.day = 15
+        dateComp.hour = 14
+        dateComp.minute = 38
         dateComp.timeZone = NSTimeZone.systemTimeZone()
         
         let calender:NSCalendar = NSCalendar.init(calendarIdentifier: NSCalendarIdentifierGregorian )!
         let date = calender.dateFromComponents(dateComp)
         
-        let notification = UILocalNotification.init()
+        let notification = UILocalNotification()
         notification.category = "FIRST_CATEGORY"
         notification.alertBody = "Hi, I am a notification"
         notification.fireDate = date
+        notification.alertAction = "alertAction"
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
         
         
